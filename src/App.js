@@ -2,6 +2,7 @@ import React from 'react'
 // import { Helmet } from 'react-helmet-async'
 
 import Home from './components/Home'
+import PreLaunch from './components/PreLaunch/PreLaunch.js'
 
 const App = () => {
   // <Helmet>
@@ -13,7 +14,7 @@ const App = () => {
   //       </Helmet>
   return (
     <>
-    <Home/>
+    <PreLaunch/>
     </>
   )
 }
