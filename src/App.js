@@ -21,11 +21,13 @@ const App = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Home curruser={user} />} />
+        <Route exact path="/" element={<PreLaunch curruser={user} />} />
+
+          {/* <Route exact path="/" element={<Home curruser={user} />} />
           <Route exact path="/auth" element={<Signup />} />
           <Route exact path="/auth/forgotpassword" element={<ForgotPassword />} />
           <Route exact path="/auth/resetpassword/:email" element={<ResetPassword />} />
-          <Route exact path="/terms&conditions" element={<TermsAndConditions />} />
+          <Route exact path="/terms&conditions" element={<TermsAndConditions />} /> */}
           <Route path="*" element={<Navigate replace to="/" />} />
         </Routes>
       </BrowserRouter>

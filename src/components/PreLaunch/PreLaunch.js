@@ -7,9 +7,9 @@ const PreLaunch = () => {
   return (
     <div>
       <div class="wrapper">
-        <h1>coming soon<span class="dot">.</span></h1>
+        <h1>Our Servers are Down Currently<span class="dot">.</span></h1>
         {/* <DateCountdown dateTo='January 24, 2023 00:00:00 GMT+05:30' callback={()=>alert('We are Live Now!!')}  /> */}
-        <p>Thank you for visiting our website. We are currently working hard to bring you an exciting new online experience. Please check back soon for updates and the official launch of our website.</p>
+        <p>We are currently working hard to fix. Please check back soon. Sorry for the inconvenience caused.</p>
         <div class="icons">
 
           <a target="_blank" href="https://www.linkedin.com/company/crackdsa/"><i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
