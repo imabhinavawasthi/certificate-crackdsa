@@ -1,117 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-
-:root {
-  --dark-color: #212121;
-}
-
-body {
-  background: #d9e2f5;
-  /* font-family: system-ui; */
-  text-align: center;
-  margin-top: 40px;
-  font-size: 1.5em;
-}
-
-h4 {
-  font-weight: bold;
-  margin-bottom: 1px;
-}
-h1 {
-  font-weight: normal;
-  margin-top: 0;
-  margin-bottom: 40px;
-  font-size: 2em;
-}
-
-img {
-  /* border-radius: 150%; */
-  height: 120px;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main * {
-  margin-bottom: 12px;
-}
-
-input {
-  /* width: 20%; */
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  /* width: 20; */
-}
-
-/* for styling the autocomplete style */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  transition: background-color 5000s ease-in-out 0s;
-  -webkit-text-fill-color: var(--dark-color) !important;
-}
-
-button {
-  background: #8bc34a;
-  color: #fff;
-  border: none;
-  font-size: 0.8em;
-  padding: 5px 15px;
-  margin: 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-a {
-  color: #6492f6;
-}
-
-/* dark mode css */
-@media (prefers-color-scheme: dark) {
-  body {
-    background: var(--dark-color);
-    color: #fff;
+.newsletter-subscribe {
+    color:#313437;
+    background-color:#fff;
+    padding:50px 0;
   }
-  input,
-  input:active {
-    background: var(--dark-color);
-    border-color: #fff;
-    color: #fff;
+  
+  .newsletter-subscribe p {
+    color:#7d8285;
+    line-height:1.5;
   }
-
-  /* for styling the autocomplete style */
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s;
-    -webkit-text-fill-color: #fff !important;
+  
+  .newsletter-subscribe h2 {
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:25px;
+    line-height:1.5;
+    padding-top:0;
+    margin-top:0;
+    color:inherit;
   }
-}
-
-header::before{
-  background: url('./assests/bg.jpg') center center/cover no-repeat;
-  content: "";
-  position: absolute;
-  top:0px;
-  left: 0px;
-  min-height: 100vh;
-  width: 100%;
-  z-index: -1;
-  opacity: 0.2;
-}
-/* header h4{
-  font-family: 'Orbitron', sans-serif;
-} */
-
-/* .front{
-  font-family: "Motiva Sans Bold sans-serif";
-   color: #18216d;
-   font-size:"5px";
-   font-weight:"700";
-} */
+  
+  .newsletter-subscribe .intro {
+    font-size:16px;
+    max-width:500px;
+    margin:0 auto 25px;
+  }
+  
+  .newsletter-subscribe .intro p {
+    margin-bottom:35px;
+  }
+  
+  .newsletter-subscribe form {
+    justify-content:center;
+  }
+  
+  .newsletter-subscribe form .form-control {
+    background:#eff1f4;
+    border:none;
+    border-radius:3px;
+    box-shadow:none;
+    outline:none;
+    color:inherit;
+    text-indent:9px;
+    height:45px;
+    margin-right:10px;
+    min-width:250px;
+  }
+  
+  .newsletter-subscribe form .btn {
+    padding:16px 32px;
+    border:none;
+    background:none;
+    box-shadow:none;
+    text-shadow:none;
+    opacity:0.9;
+    text-transform:uppercase;
+    font-weight:bold;
+    font-size:13px;
+    letter-spacing:0.4px;
+    line-height:1;
+  }
+  
+  .newsletter-subscribe form .btn:hover {
+    opacity:1;
+  }
+  
+  .newsletter-subscribe form .btn:active {
+    transform:translateY(1px);
+  }
+  
+  .newsletter-subscribe form .btn-primary {
+    background-color:#055ada !important;
+    color:#fff;
+    outline:none !important;
+  }
+  .btn-large{
+    width: 1000px;
+  }
+  
