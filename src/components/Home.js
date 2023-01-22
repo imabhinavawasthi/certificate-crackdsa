@@ -13,7 +13,7 @@ const Home = () => {
   const userName = useRef();
   const submitBtn = useRef();
   let [val, setVal] = useState("");
-
+  let [done,setDone]=useState(false);
   const handleChange = () => {
     setVal(userName.current.value);
   }
@@ -24,7 +24,8 @@ const Home = () => {
     );
 
   //  submit name handler
-  const submitHandler = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
     const val = capitalize(userName.current.value);
 
     //check if the text is empty or not
@@ -109,6 +110,7 @@ const Home = () => {
     let fileName = 'crackDSA DSA Bootcamp Certificate.pdf';
     link.download = fileName;
     link.click();
+    setDone(true);
   };
   return (
 
@@ -121,10 +123,18 @@ const Home = () => {
             <p class="text-center">Hi {curruser?.name}, Welcome to <strong style={{color:"#055ada"}}>crackDSA bootcamp certification program!</strong> We are excited to offer our students the opportunity to earn a certificate upon completion of our intensive training course.</p>
           </div>
           {curruser?
-        <form class="form-inline" >
+        <>
+        {done?
+      <>
+            <h2 class="text-center">Certificate Downloaded!</h2>
+
+      </>:
+      <form class="form-inline" >
         <div class="form-group"><input class="form-control" required type="text" ref={userName} name="Name" autoComplete="name" placeholder="Enter Your Name" id="name" minLength={3} maxLength={26} value={val} onChange={handleChange}/></div>
-        <div class="form-group"><button class="btn btn-primary p-1" id="submitBtn" ref={submitBtn} onClick={submitHandler}>Get Certificate </button></div>
-      </form>
+        <div class="form-group"><button class="btn btn-primary p-1" id="submitBtn" ref={submitBtn} onClick={(e)=>submitHandler(e)}>Get Certificate </button></div>
+      </form>  
+      }
+        </>
       :
       <form class="form-inline" >    
             <div className='row'>
