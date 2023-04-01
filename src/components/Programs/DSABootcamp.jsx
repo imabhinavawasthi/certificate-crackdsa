@@ -4,6 +4,7 @@ import '../../style.css';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { PDFDocument, StandardFonts, rgb, fontkit } from 'pdf-lib'
 
+
 const DSABootcamp = () => {
     const navigate = useNavigate()
 
@@ -47,9 +48,7 @@ const DSABootcamp = () => {
 
     // yu
     const generatePDF = async (name) => {
-        const existingPdfBytes = await fetch("./certificate1.pdf").then((res) => res.arrayBuffer()
-        );
-    
+        const existingPdfBytes = await fetch(".././certificate1.pdf").then((res) => res.arrayBuffer());
     
     
     
@@ -162,7 +161,7 @@ const DSABootcamp = () => {
                     <div class="flex flex-wrap items-center sm:-mx-3">
                         <div>
                             <div class="w-full pb-6 ">
-                                <h1 class="text-4xl font-extrabold tracking-tight text-gray-900">
+                                <h1 class="mx-auto text-4xl font-extrabold tracking-tight text-gray-900">
                                     <span class="block xl:inline">Get Your Certificate: </span>
                                     <span class="block text-indigo-600 xl:inline">DSA Bootcamp.</span>
                                 </h1>
@@ -173,7 +172,7 @@ const DSABootcamp = () => {
                                         <>
                                             {done ?
                                                 <>
-                                                    <h2 class="text-center">Certificate Downloaded!</h2>
+                                                    <h2 class="mx-auto text-black">Certificate Downloaded!</h2>
 
                                                 </> :
                                                 <form class="w-full form-inline">
@@ -191,7 +190,7 @@ const DSABootcamp = () => {
                                         <form class="form-inline" >
                                             <div className='row'>
                                                 <div class="form-group">
-                                                    <NavLink to="auth"><button class="btn-large btn btn-primary p-1" >Signup/Login to get Certificate </button></NavLink>
+                                                    <NavLink to="/auth"><button class="btn-large btn btn-primary p-1" >Signup/Login to get Certificate </button></NavLink>
                                                 </div>
                                             </div>
                                         </form>
