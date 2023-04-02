@@ -86,7 +86,7 @@ form.sign-in-form {
 .input-field {
   max-width: 380px;
   width: 100%;
-  background-color: #4f3af0;
+  background-color: #f0f0f0;
   margin: 10px 0;
   height: 55px;
   border-radius: 55px;
@@ -164,7 +164,7 @@ form.sign-in-form {
   transition: 0.5s;
 }
 
-.btn:hover {
+.btn{
   background-color: #4d84e2;
 }
 .panels-container {
