@@ -30,13 +30,13 @@ const DSABootcamp = () => {
     //  submit name handler
     const submitHandler = (e) => {
         e.preventDefault();
-        
+
         const val = capitalize(userName.current.value);
 
         //check if the text is empty or not
         if (val.trim() !== "") {
             // console.log(val);
-            
+
             generatePDF(val);
 
         } else {
@@ -49,18 +49,18 @@ const DSABootcamp = () => {
     // yu
     const generatePDF = async (name) => {
         const existingPdfBytes = await fetch(".././certificate1.pdf").then((res) => res.arrayBuffer());
-    
-    
-    
+
+
+
         // Load a PDFDocument from the existing PDF bytes
         const pdfDoc = await PDFDocument.load(existingPdfBytes);
         pdfDoc.registerFontkit(fontkit);
-    
+
         // Embed our custom font in the document
-    
+
         const TimesRomanItalic = await pdfDoc.embedFont(StandardFonts.TimesRomanItalic)
-    
-    
+
+
         // // get font
         // const fontBytes = await fetch("./Sanchez-Regular.ttf").then((res) =>
         //   res.arrayBuffer()
@@ -68,42 +68,42 @@ const DSABootcamp = () => {
         // PDFDocument.registerFontkit(fontBytes);
         // // Embed our custom font in the document
         // const SanChezFont = await pdfDoc.embedFont(fontBytes);
-    
+
         // Get the first page of the document
         const pages = pdfDoc.getPages();
         const firstPage = pages[0];
-    
-    
-    
+
+
+
         // Draw a string of text diagonally across the first page
         if (name.length < 17) {
-          firstPage.drawText(name, {
-            x: 60,
-            y: 330,
-            size: 58,
-            font: TimesRomanItalic,
-            color: rgb(0, 0, 0),
-          });
+            firstPage.drawText(name, {
+                x: 60,
+                y: 330,
+                size: 58,
+                font: TimesRomanItalic,
+                color: rgb(0, 0, 0),
+            });
         }
         else {
-          firstPage.drawText(name, {
-            x: 60,
-            y: 330,
-            size: 40,
-            font: TimesRomanItalic,
-            color: rgb(0, 0, 0),
-          });
+            firstPage.drawText(name, {
+                x: 60,
+                y: 330,
+                size: 40,
+                font: TimesRomanItalic,
+                color: rgb(0, 0, 0),
+            });
         }
-    
+
         // Serialize the PDFDocument to bytes (a Uint8Array)
         const pdfBytes = await pdfDoc.save();
         // console.log("Done creating");
-    
+
         // this was for creating uri and showing in iframe
-    
+
         // const pdfDataUri = await pdfDoc.saveAsBase64({ dataUri: true });
         // document.getElementById("pdf").src = pdfDataUri;
-    
+
         // var file = new File(
         //   [pdfBytes],
         //   "CrackDSA_Participation.pdf",
@@ -118,7 +118,7 @@ const DSABootcamp = () => {
         link.download = fileName;
         link.click();
         setDone(true);
-      };
+    };
     return (
 
         <>
@@ -156,46 +156,49 @@ const DSABootcamp = () => {
                     </>}
                 </div>
             </section>
-            <section class="px-2 xl:py-32 bg-white md:px-0">
-                <div class="container items-center max-w-6xl px-8 mx-auto xl:px-5">
-                    <div class="flex flex-wrap items-center sm:-mx-3">
-                        <div>
-                            <div class="w-full pb-6 ">
-                                <h1 class="mx-auto text-4xl font-extrabold tracking-tight text-gray-900">
+            <section class="py-20 bg-gray-50">
+                <div class="container items-center max-w-6xl px-4 px-10 mx-auto sm:px-20 md:px-32 lg:px-16">
+                    <div class="flex flex-wrap items-center -mx-3">
+                        <div class="order-1 w-full px-3 lg:w-1/2 lg:order-0">
+                            <div class="w-full lg:max-w-md">
+                                <h2 class="mx-auto text-4xl font-extrabold tracking-tight text-gray-900">
                                     <span class="block xl:inline">Get Your Certificate: </span>
                                     <span class="block text-indigo-600 xl:inline">DSA Bootcamp.</span>
-                                </h1>
+                                </h2>
                                 <p class="mx-auto text-base text-gray-500 ">Hi, {curruser?.name}. We are thrilled to have you as a participant in our bootcamp. We hope that you found the program informative, challenging, and rewarding, and that you gained valuable skills and knowledge that you can apply to your coding career.</p>
-                                <div class="relative flex flex-col sm:flex-row py-10">
 
-                                    {curruser ?
-                                        <>
-                                            {done ?
-                                                <>
-                                                    <h2 class="mx-auto text-black">Certificate Downloaded!</h2>
+                            </div>
+                        </div>
+                        <div class="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0">
+                            <div class="relative flex flex-col sm:flex-row py-10">
 
-                                                </> :
-                                                <form class="w-full form-inline">
-                                                    <div class="form-group flex items-center border-b border-indigo-500 py-2">
-                                                        {/* <input class="form-control appearance-none bg-transparent border-none w-full text-black-700 mr-3 py-1 px-2 leading-tight focus:outline-none" required type="text" ref={userName} name="Name" autoComplete="name" placeholder="Enter Your Name" id="name" minLength={3} maxLength={26} value={val} onChange={handleChange} /> */}
-                                                        <div class="form-group "><input class="form-control focus:outline-none text-black" required type="text" ref={userName} name="Name" autoComplete="name" placeholder="Enter Your Name" id="name" minLength={3} maxLength={26} value={val} onChange={handleChange} /></div>
-                                                        <button class="flex-shrink-0 bg-indigo-600 hover:bg-indigo-600 border-indigo-500 hover:border-indigo-700 text-sm border-4 text-white py-1 px-2 rounded" id="submitBtn" ref={submitBtn} onClick={(e) => submitHandler(e)}>
-                                                            Download
-                                                        </button>
-                                                    </div>
-                                                </form>
-                                            }
-                                        </>
-                                        :
-                                        <form class="form-inline" >
-                                            <div className='row'>
-                                                <div class="form-group">
-                                                    <NavLink to="/auth"><button class="btn-large btn btn-primary p-1" >Signup/Login to get Certificate </button></NavLink>
+                                {curruser ?
+                                    <>
+                                        {done ?
+                                            <>
+                                                <h2 class="mx-auto text-black">Certificate Downloaded!</h2>
+
+                                            </> :
+                                            <form class="w-full form-inline">
+                                                <div class="form-group flex items-center border-b border-indigo-500 py-2">
+                                                    {/* <input class="form-control appearance-none bg-transparent border-none w-full text-black-700 mr-3 py-1 px-2 leading-tight focus:outline-none" required type="text" ref={userName} name="Name" autoComplete="name" placeholder="Enter Your Name" id="name" minLength={3} maxLength={26} value={val} onChange={handleChange} /> */}
+                                                    <div class="form-group "><input class="form-control focus:outline-none text-black" required type="text" ref={userName} name="Name" autoComplete="name" placeholder="Enter Your Name" id="name" minLength={3} maxLength={26} value={val} onChange={handleChange} /></div>
+                                                    <button class="flex-shrink-0 bg-indigo-600 hover:bg-indigo-600 border-indigo-500 hover:border-indigo-700 text-sm border-4 text-white py-1 px-2 rounded" id="submitBtn" ref={submitBtn} onClick={(e) => submitHandler(e)}>
+                                                        Download
+                                                    </button>
                                                 </div>
+                                            </form>
+                                        }
+                                    </>
+                                    :
+                                    <form class="form-inline" >
+                                        <div className='row'>
+                                            <div class="form-group">
+                                                <NavLink to="/auth"><button class="btn-large btn btn-primary p-1" >Signup/Login to get Certificate </button></NavLink>
                                             </div>
-                                        </form>
-                                    }
-                                </div>
+                                        </div>
+                                    </form>
+                                }
                             </div>
                         </div>
                     </div>
@@ -225,7 +228,7 @@ const DSABootcamp = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div class="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0"><img class="mx-auto sm:max-w-sm lg:max-w-full" src="https://cdn.devdojo.com/images/november2020/feature-graphic.png" alt="feature image"/></div>
+                        <div class="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0"><img class="mx-auto sm:max-w-sm lg:max-w-full" src="https://cdn.devdojo.com/images/november2020/feature-graphic.png" alt="feature image" /></div>
                     </div>
                 </div>
             </section>
