@@ -234,7 +234,7 @@ const Signup = (props) => {
                     autoComplete="off"
                   />
                 </div>
-                <input
+                <input 
                   onClick={verifyloginOTP}
                   type="submit"
                   value="Enter"
