@@ -165,11 +165,12 @@ const DSABootcamp = () => {
                                     <span class="block xl:inline">Get Your Certificate: </span>
                                     <span class="block text-indigo-600 xl:inline">DSA Bootcamp.</span>
                                 </h2>
+                                <br/>
                                 <p class="mx-auto text-base text-gray-500 ">Hi, {curruser?.name}. We are thrilled to have you as a participant in our bootcamp. We hope that you found the program informative, challenging, and rewarding, and that you gained valuable skills and knowledge that you can apply to your coding career.</p>
 
                             </div>
                         </div>
-                        <div class="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0">
+                        <div class="w-full px-3 mb-12 lg:w-1/2 md:w-3/4 sm:w-3/4 order-0 lg:order-1 lg:mb-0">
                             <div class="relative flex flex-col sm:flex-row py-10">
 
                                 {curruser ?
@@ -180,7 +181,7 @@ const DSABootcamp = () => {
 
                                             </> :
                                             <form class="w-full form-inline">
-                                                <div class="form-group flex items-center border-b border-indigo-500 py-2">
+                                                <div class="form-group flex items-center border-b border-indigo-500 py-2" style={{maxWidth:"100%"}}>
                                                     {/* <input class="form-control appearance-none bg-transparent border-none w-full text-black-700 mr-3 py-1 px-2 leading-tight focus:outline-none" required type="text" ref={userName} name="Name" autoComplete="name" placeholder="Enter Your Name" id="name" minLength={3} maxLength={26} value={val} onChange={handleChange} /> */}
                                                     <div class="form-group "><input class="form-control focus:outline-none text-black" required type="text" ref={userName} name="Name" autoComplete="name" placeholder="Enter Your Name" id="name" minLength={3} maxLength={26} value={val} onChange={handleChange} /></div>
                                                     <button class="flex-shrink-0 bg-indigo-600 hover:bg-indigo-600 border-indigo-500 hover:border-indigo-700 text-sm border-4 text-white py-1 px-2 rounded" id="submitBtn" ref={submitBtn} onClick={(e) => submitHandler(e)}>
