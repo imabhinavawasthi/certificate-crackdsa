@@ -239,6 +239,7 @@ const Signup = (props) => {
                   type="submit"
                   value="Enter"
                   className="btn solid "
+                  style={{backgroundColor:"#4d84e2"}}
                 />
                 </>}
               </form>
@@ -287,6 +288,7 @@ const Signup = (props) => {
                   type="submit"
                   value="Login"
                   className="btn solid "
+                  style={{backgroundColor:"#4d84e2"}}
                 />
                 </>}
                 {/* <p className="social-text for-pass">Or Sign in with social platforms</p>
@@ -357,6 +359,7 @@ const Signup = (props) => {
                       className="btn"
                       value="Sign up"
                       onClick={verifysignupOTP}
+                      style={{backgroundColor:"#4d84e2"}}
                     />
                       </>}
                     {/* <p className="social-text">
@@ -443,6 +446,7 @@ const Signup = (props) => {
                       className="btn"
                       value="Verify Email"
                       onClick={signup}
+                      style={{backgroundColor:"#4d84e2"}}
                     />
                     </>}
                     {/* <p className="social-text">
