@@ -181,10 +181,13 @@ const DSABootcamp = () => {
 
                                             </> :
                                             <form class="w-full form-inline">
-                                                <div class="form-group flex items-center border-b border-indigo-500 py-2" style={{maxWidth:"100%"}}>
+                                                <div class="form-group flex items-center border-b border-indigo-500 py-2" style={{width:"100%"}}>
                                                     {/* <input class="form-control appearance-none bg-transparent border-none w-full text-black-700 mr-3 py-1 px-2 leading-tight focus:outline-none" required type="text" ref={userName} name="Name" autoComplete="name" placeholder="Enter Your Name" id="name" minLength={3} maxLength={26} value={val} onChange={handleChange} /> */}
                                                     <div class="form-group "><input class="form-control focus:outline-none text-black" required type="text" ref={userName} name="Name" autoComplete="name" placeholder="Enter Your Name" id="name" minLength={3} maxLength={26} value={val} onChange={handleChange} /></div>
-                                                    <button class="flex-shrink-0 bg-indigo-600 hover:bg-indigo-600 border-indigo-500 hover:border-indigo-700 text-sm border-4 text-white py-1 px-2 rounded" id="submitBtn" ref={submitBtn} onClick={(e) => submitHandler(e)}>
+                                                    
+                                                </div>
+                                                <div class="py-5">
+                                                <button class="flex-shrink-0 bg-indigo-600 hover:bg-indigo-600 border-indigo-500 hover:border-indigo-700 text-sm border-4 text-white py-1 px-2 rounded" id="submitBtn" ref={submitBtn} onClick={(e) => submitHandler(e)}>
                                                         Download
                                                     </button>
                                                 </div>
