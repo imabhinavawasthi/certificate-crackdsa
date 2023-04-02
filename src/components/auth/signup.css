@@ -151,7 +151,7 @@ form.sign-in-form {
 
 .btn {
   width: 150px;
-  background-color: #031b34;
+  background-color: #4d84e2;
   border: none;
   outline: none;
   height: 49px;
@@ -164,9 +164,6 @@ form.sign-in-form {
   transition: 0.5s;
 }
 
-.btn{
-  background-color: #4d84e2;
-}
 .panels-container {
   position: absolute;
   height: 100%;
