@@ -48,7 +48,7 @@ const DSABootcamp = () => {
 
     // yu
     const generatePDF = async (name) => {
-        const existingPdfBytes = await fetch(".././certificate1.pdf").then((res) => res.arrayBuffer());
+        const existingPdfBytes = await fetch(".././dsa-bootcamp.pdf").then((res) => res.arrayBuffer());
 
 
 

@@ -10,6 +10,8 @@ import TermsAndConditions from "./components/helpers/TermsAndConditions.jsx"
 import NewHome from './components/NewHome.js';
 import AllCerti from './components/Pages/AllCerti.jsx';
 import DSABootcamp from './components/Programs/DSABootcamp.jsx';
+import GDSCportfolioevent from './components/Programs/GDSCportfolioevent.js';
+import Launchpadx from './components/Programs/Launchpadx.js';
 
 const App = () => {
   const user = JSON.parse(localStorage.getItem('crackdsa-user'));
@@ -29,6 +31,8 @@ const App = () => {
           <Route exact path="/" element={<NewHome curruser={user} />} />
           <Route exact path="/programs" element={<AllCerti curruser={user} />} />
           <Route exact path="/program/dsa-bootcamp" element={<DSABootcamp curruser={user} />} />
+          <Route exact path="/program/gdsc-portfolio-event" element={<GDSCportfolioevent curruser={user} />} />
+          <Route exact path="/program/launchpadx" element={<Launchpadx curruser={user} />} />
           <Route exact path="/auth" element={<Signup />} />
           <Route exact path="/auth/forgotpassword" element={<ForgotPassword />} />
           <Route exact path="/auth/resetpassword/:email" element={<ResetPassword />} />
