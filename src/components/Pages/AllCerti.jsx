@@ -62,7 +62,7 @@ const AllCerti = () => {
                         </a>
                     </NavLink>
                     </div>
-                    <div className='py-5'>
+                    {/* <div className='py-5'>
                     <NavLink to="/program/gdsc-portfolio-event">
                         <a href="" class="flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-indigo-600 rounded-md sm:mb-0 hover:bg-indigo-700 sm:w-auto">
                             GDSC Portfolio Event Certificate
@@ -77,7 +77,7 @@ const AllCerti = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                         </a>
                     </NavLink>
-                    </div>
+                    </div> */}
                 </div>
             </section>
 
