@@ -114,7 +114,7 @@ const Launchpadx = () => {
         let blob = new Blob([pdfBytes], { type: "application/pdf" });
         let link = document.createElement('a');
         link.href = window.URL.createObjectURL(blob);
-        let fileName = 'Boarding Pass LaunchPadx.pdf';
+        let fileName = 'LaunchPadx Certification.pdf';
         link.download = fileName;
         link.click();
         setDone(true);

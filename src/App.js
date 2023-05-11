@@ -30,8 +30,8 @@ const App = () => {
 
           <Route exact path="/" element={<NewHome curruser={user} />} />
           <Route exact path="/programs" element={<AllCerti curruser={user} />} />
-          <Route exact path="/program/dsa-bootcamp" element={<DSABootcamp curruser={user} />} />
-          <Route exact path="/program/gdsc-portfolio-event" element={<GDSCportfolioevent curruser={user} />} />
+          {/* <Route exact path="/program/dsa-bootcamp" element={<DSABootcamp curruser={user} />} />
+          <Route exact path="/program/gdsc-portfolio-event" element={<GDSCportfolioevent curruser={user} />} /> */}
           <Route exact path="/program/launchpadx" element={<Launchpadx curruser={user} />} />
           <Route exact path="/auth" element={<Signup />} />
           <Route exact path="/auth/forgotpassword" element={<ForgotPassword />} />
